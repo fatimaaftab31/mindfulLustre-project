@@ -1,0 +1,93 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 100% 98%;
+    --foreground: 240 19% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 19% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 19% 16%;
+
+    --primary: 260 85% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 29% 54%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 191 91% 73%;
+    --accent-foreground: 240 19% 16%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 29% 88%;
+    --input: 260 29% 88%;
+    --ring: 260 85% 65%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 19% 16%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 19% 20%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 19% 20%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 260 85% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 29% 54%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 19% 25%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 191 91% 40%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 19% 30%;
+    --input: 240 19% 30%;
+    --ring: 260 85% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  }
+}
+
+@layer components {
+  .mood-emoji {
+    @apply text-4xl transition-all duration-300 hover:scale-110 cursor-pointer opacity-50;
+  }
+  
+  .mood-emoji.active {
+    @apply opacity-100 scale-110;
+  }
+  
+  .breathing-circle {
+    @apply rounded-full bg-gradient-to-r from-wellness-purple to-wellness-blue shadow-lg transition-all duration-300;
+  }
+}
